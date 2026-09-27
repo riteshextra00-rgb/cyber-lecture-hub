@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Hub - Secure Learning Node</title>
+    <script src="https://tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        body { background: linear-gradient(180deg, #070a13 0%, #030407 100%); font-family: 'Segoe UI', sans-serif; }
+        .cyber-card { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(51, 65, 85, 0.5); }
+        .neon-glow-btn { background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%); box-shadow: 0 0 15px rgba(6, 182, 212, 0.3); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body class="text-slate-200 pb-28 min-h-screen">
+
+    <!-- NAVIGATION HEADER -->
+    <div class="flex items-center justify-between p-4 bg-slate-950/80 border-b border-slate-800/60 sticky top-0 z-50 backdrop-blur-md">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center font-black text-slate-950 text-lg shadow-lg shadow-cyan-500/20">U</div>
+            <div>
+                <h2 class="text-xs uppercase tracking-widest font-black text-cyan-400">Node Operator</h2>
+                <p class="text-sm font-bold text-slate-300 mt-0.5">ID: Ritesh_CA_Fnd</p>
+            </div>
+        </div>
+        <div class="bg-cyan-500/10 border border-cyan-500/30 px-3 py-1 rounded-md text-[10px] font-bold text-cyan-400 tracking-wider">
+            SECURE ACCESS
+        </div>
+    </div>
+
+    <!-- ================= SCREEN 1: ACCESS HUB (AD SCREEN) ================= -->
+    <div id="access-hub" class="tab-content active p-4 space-y-6 max-w-md mx-auto">
+        
+        <!-- GATEWAY LINKS -->
+        <div>
+            <p class="text-[10px] font-black text-cyan-400 tracking-widest mb-3 uppercase px-1"><i class="fa-solid fa-key mr-1.5"></i> Stream Authentication Gateways</p>
+            <div class="space-y-3">
+                <div class="cyber-card p-4 rounded-xl flex items-center justify-between">
+                    <div>
+                        <h4 class="font-bold text-slate-200 text-sm tracking-wide">Sync Gateway Alpha</h4>
+                        <p class="text-[11px] text-slate-400 mt-1"><i class="fa-solid fa-bolt text-cyan-400 mr-1"></i> Inject +12h Token Validity</p>
+                    </div>
+                    <a href="https://gplinks.com" target="_blank" class="neon-glow-btn text-slate-950 font-black text-xs px-5 py-2.5 rounded-lg transition-all hover:scale-105">SYNC</a>
+                </div>
+                <div class="cyber-card p-4 rounded-xl flex items-center justify-between opacity-40">
+                    <div>
+                        <h4 class="font-bold text-slate-400 text-sm tracking-wide">Sync Gateway Delta</h4>
+                        <p class="text-[11px] text-emerald-500 font-semibold mt-1"><i class="fa-solid fa-circle-check mr-1"></i> Data Stream Fully Synced</p>
+                    </div>
+                    <button class="bg-slate-800 text-slate-500 font-bold text-xs px-5 py-2.5 rounded-lg cursor-not-allowed" disabled>SYNCED</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LIVE STATS -->
+        <div>
+            <p class="text-[10px] font-black text-cyan-400 tracking-widest mb-3 uppercase px-1"><i class="fa-solid fa-chart-simple mr-1.5"></i> Bandwidth & Node Quota</p>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="cyber-card p-4 rounded-xl text-center">
+                    <span class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">14 <span class="text-xs text-slate-600 font-normal">/ 15</span></span>
+                    <p class="text-[9px] font-bold text-slate-400 tracking-wider mt-1.5 uppercase">Node Connections Used</p>
+                </div>
+                <div class="cyber-card p-4 rounded-xl text-center">
+                    <span class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">1 <span class="text-xs text-slate-600 font-normal">/ 4</span></span>
+                    <p class="text-[9px] font-bold text-slate-400 tracking-wider mt-1.5 uppercase">Relay Path Requests</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TIMER COUNTDOWN -->
+        <div class="cyber-card p-5 rounded-xl text-center relative overflow-hidden">
+            <p class="text-[10px] font-black text-cyan-500 tracking-widest uppercase mb-4">Time Matrix Expiry Clock</p>
+            <div class="flex justify-center items-center gap-4 mb-4">
+                <div class="bg-slate-950/80 px-4 py-2 rounded-lg border border-slate-800">
+                    <span class="text-2xl font-black tracking-wider text-cyan-400 block">23</span>
+                    <span class="text-[9px] text-slate-500 font-bold tracking-wider">HRS</span>
+                </div>
+                <span class="text-xl font-bold text-slate-700 animate-pulse">:</span>
+                <div class="bg-slate-950/80 px-4 py-2 rounded-lg border border-slate-800">
+                    <span class="text-2xl font-black tracking-wider text-cyan-400 block">17</span>
+                    <span class="text-[9px] text-slate-500 font-bold tracking-wider">MINS</span>
+                </div>
+                <span class="text-xl font-bold text-slate-700 animate-pulse">:</span>
+                <div class="bg-slate-950/80 px-4 py-2 rounded-lg border border-slate-800">
+                    <span class="text-2xl font-black tracking-wider text-cyan-400 block">02</span>
+                    <span class="text-[9px] text-slate-500 font-bold tracking-wider">SECS</span>
+                </div>
+            </div>
+            <div class="inline-flex items-center gap-1.5 bg-cyan-500/10 text-cyan-400 text-[10px] px-3 py-1 rounded-md font-bold tracking-wider uppercase border border-cyan-500/20">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span> Encryption Shield: Active
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SCREEN 2: ALTERED LECTURES HUB ================= -->
+    <div id="lectures-hub" class="tab-content p-4 space-y-6 max-w-md mx-auto">
+        
+        <!-- COURSE TYPE SELECTOR -->
+        <div class="grid grid-cols-2 gap-2 bg-slate-950/60 p-1.5 rounded-xl border border-slate-800/80">
+            <button class="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/40 text-cyan-400 font-bold py-2 rounded-lg text-xs uppercase tracking-wider">Foundation Tier</button>
+            <button class="text-slate-500 font-bold py-2 rounded-lg text-xs uppercase tracking-wider hover:text-slate-300">Intermediate Tier</button>
+        </div>
+
+        <!-- PRIME PROFESSORS (FORMERLY MY FACULTIES) -->
+        <div>
+            <p class="text-[10px] font-black text-cyan-400 tracking-widest mb-3 uppercase px-1"><i class="fa-solid fa-user-tie mr-1.5"></i> Assigned Core Mentors</p>
+            <div class="flex gap-3 overflow-x-auto pb-2">
+                <!-- Faculty Card 1 -->
+                <div class="cyber-card p-3 rounded-xl text-center min-w-[110px] relative border-cyan-500/30">
+                    <div class="absolute top-2 right-2 text-rose-500 text-xs"><i class="fa-solid fa-heart"></i></div>
+                    <div class="w-10 h-10 bg-slate-800 rounded-full mx-auto flex items-center justify-center text-cyan-400 font-bold border border-slate-700">CA</div>
+                    <h5 class="text-xs font-bold text-slate-200 mt-2 truncate">Anurag C.</h5>
+                    <p class="text-[9px] text-cyan-500 font-medium mt-0.5">Quant Stream</p>
+                </div>
+                <!-- Empty Faculty Slot -->
+                <div class="cyber-card p-3 rounded-xl text-center min-w-[110px] border-dashed border-slate-700 flex flex-col justify-center items-center opacity-40">
+                    <i class="fa-solid fa-plus text-slate-500 text-sm"></i>
+                    <span class="text-[9px] text-slate-500 mt-1">Add Mentor</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUBJECT MODULES GRID (FORMERLY ACCOUNTS, LAWS, ETC.) -->
+        <div>
+            <p class="text-[10px] font-black text-cyan-400 tracking-widest mb-3 uppercase px-1"><i class="fa-solid fa-box-archive mr-1.5"></i> Stream Modules</p>
+            <div class="grid grid-cols-2 gap-3">
+                <!-- Accounts -->
+                <div class="cyber-card p-4 rounded-xl cursor-pointer hover:border-cyan-500/40 transition-all">
+                    <div class="w-8 h-8 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 mb-3"><i class="fa-solid fa-calculator"></i></div>
+                    <h4 class="font-bold text-sm text-slate-200">Financial Accounts</h4>
+                    <p class="text-[10px] text-slate-500 mt-1">14 Premium Bundles</p>
+                </div>
+                <!-- Laws -->
+                <div class="cyber-card p-4 rounded-xl cursor-pointer hover:border-cyan-500/40 transition-all">
+                    <div class="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-3"><i class="fa-solid fa-gavel"></i></div>
+                    <h4 class="font-bold text-sm text-slate-200">Corporate Laws</h4>
+                    <p class="text-[10px] text-slate-500 mt-1">12 Premium Bundles</p>
+                </div>
+                <!-- Economics -->
+                <div class="cyber-card p-4 rounded-xl cursor-pointer hover:border-cyan-500/40 transition-all">
+                    
